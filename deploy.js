@@ -15,9 +15,9 @@ async function main() {
     let currentPrice = await contract.getAmountsOut(10000000, ["0x55d398326f99059ff775485246999027b3197955", "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"]);
 
     if (previousPrice > currentPrice) {
-        console.log(`\x1b[36m БЫЛО: \x1b[1m\x1b[32m${previousPrice[1]}\x1b[0m - \x1b[35m СТАЛО: \x1b[1m\x1b[33m${currentPrice[1]}\x1b[0m - \x1b[1m\x1b[31mУПАЛ\x1b[0m`);
+        console.log(`\x1b[36m БЫЛО: \x1b[1m\x1b[32m${previousPrice[1]}\x1b[\x1b\[0m → \x1b[35m СТАЛО: \x1b[1m\x1b[33m${currentPrice[1]}\x1b[0m - \x1b[1m\x1b[31mУПАЛ\x1b[0m`);
     } else if (previousPrice < currentPrice) {
-        console.log(`\x1b[36m БЫЛО: \x1b[1m\x1b[33m${previousPrice[1]}\x1b[0m - \x1b[35m СТАЛО: \x1b[1m\x1b[32m${currentPrice[1]}\x1b[0m - \x1b[32mВЫРОС\x1b[0m`);
+        console.log(`\x1b[36m БЫЛО: \x1b[1m\x1b[33m${previousPrice[1]}\x1b[\x1b\[0m → \x1b[35m СТАЛО: \x1b[1m\x1b[32m${currentPrice[1]}\x1b[0m - \x1b[32mВЫРОС\x1b[0m`);
     }
 
     previousPrice = currentPrice;
